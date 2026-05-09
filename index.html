@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+            opacity: 0.9;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        button {
+            margin-top: 40px;
+            padding: 15px 35px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #ff4d6d;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            animation: pulse 1.5s infinite;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* floating hearts */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
+            animation: float 6s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: -10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.1);}
+            100% {transform: scale(1);}
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Happy Mother’s Day ❤️</h1>
+<p>For the one who means everything to me…</p>
+
+<button onclick="goNext()">Touch My Heart 💖</button>
+
+<!-- hearts -->
+<div class="heart" style="left:10%; animation-duration:5s;"></div>
+<div class="heart" style="left:30%; animation-duration:6s;"></div>
+<div class="heart" style="left:50%; animation-duration:7s;"></div>
+<div class="heart" style="left:70%; animation-duration:5.5s;"></div>
+<div class="heart" style="left:90%; animation-duration:6.5s;"></div>
+
+<script>
+function goNext() {
+    window.location.href = "love.html";
+}
+</script>
+
+</body>
+</html>
